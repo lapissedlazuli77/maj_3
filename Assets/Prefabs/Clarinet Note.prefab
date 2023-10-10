@@ -99,6 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a222d2410eb78794a8b3fb3062ac532c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  note1: {fileID: 1243540083, guid: ffd9e368da6081f4db1158374ed0b056, type: 3}
+  note2: {fileID: 1328065143, guid: ffd9e368da6081f4db1158374ed0b056, type: 3}
+  srend: {fileID: 0}
+  typing: 
 --- !u!61 &2905513509086680596
 BoxCollider2D:
   m_ObjectHideFlags: 0

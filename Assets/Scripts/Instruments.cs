@@ -76,6 +76,7 @@ public class Instruments : MonoBehaviour
                 float speedeffect = Random.Range(0.01f, 0.02f);
                 Note vio = (Note)Instantiate(vionote, position, Quaternion.identity);
                 vio.GetComponent<Rigidbody2D>().AddForce(shooter.transform.up * speedeffect);
+                vio.GetComponent<Note>().typing = "Violin";
             }
         }
         if (instrum == "Clarinet")
@@ -86,12 +87,14 @@ public class Instruments : MonoBehaviour
                 float speedeffect = Random.Range(0.011f, 0.013f);
                 Note clar = (Note)Instantiate(clarinote, position, Quaternion.identity);
                 clar.GetComponent<Rigidbody2D>().AddForce(shooter.transform.up * speedeffect);
+                clar.GetComponent<Note>().typing = "Clarinet";
             }
         }
         if (instrum == "Tuba")
         {
             Note tub = (Note)Instantiate(tunote, position, Quaternion.identity);
             tub.GetComponent<Rigidbody2D>().AddForce(shooter.transform.up * 0.004f);
+            tunote.GetComponent<Note>().typing = "Tuba";
         }
         playsound.Play();
     }
