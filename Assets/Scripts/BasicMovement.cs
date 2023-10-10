@@ -8,6 +8,7 @@ public class BasicMovement : MonoBehaviour
     SpriteRenderer srend;
     float horizMove;
     public float speedmodify;
+    public string direct = "right";
 
     public bool grounded = false;
     public float castDist = 0.2f;
@@ -40,9 +41,11 @@ public class BasicMovement : MonoBehaviour
             if (horizMove < -0.2f)
             {
                 srend.flipX = true;
+                direct = "left";
             } else if (horizMove > 0.2f)
             {
                 srend.flipX = false;
+                direct = "right";
             }
         }
         if (Input.GetKey("space") && grounded)
